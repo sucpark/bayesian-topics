@@ -90,6 +90,7 @@ dmypy.json
 Thumbs.db
 
 # Project specific
+legacy/
 outputs/
 data/raw/
 data/processed/
