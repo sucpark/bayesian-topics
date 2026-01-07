@@ -130,26 +130,6 @@ class Corpus:
             max_vocab_size=max_vocab_size,
         )
 
-    def get_doc_term_matrix(self) -> List[List[tuple[int, int]]]:
-        """
-        Get document-term matrix in sparse format.
-
-        Returns:
-            List of (word_idx, count) tuples for each document
-        """
-        from collections import Counter
-
-        result = []
-        for doc in self.documents:
-            word_counts = Counter(doc)
-            doc_bow = [
-                (self.vocabulary[word], count)
-                for word, count in word_counts.items()
-                if word in self.vocabulary
-            ]
-            result.append(doc_bow)
-        return result
-
     def get_statistics(self) -> dict:
         """Get corpus statistics."""
         total_words = sum(len(doc) for doc in self.documents)

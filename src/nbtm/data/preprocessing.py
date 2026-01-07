@@ -35,19 +35,6 @@ KOREAN_STOPWORDS: Set[str] = {
 }
 
 
-def simple_tokenize(text: str) -> List[str]:
-    """
-    Simple whitespace tokenizer.
-
-    Args:
-        text: Input text
-
-    Returns:
-        List of tokens
-    """
-    return text.split()
-
-
 def word_tokenize(text: str) -> List[str]:
     """
     Word tokenizer that handles punctuation.

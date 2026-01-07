@@ -9,7 +9,6 @@ from nbtm.training.callbacks import (
     ProgressLogger,
     WandbLogger,
 )
-from nbtm.training.metrics import MetricsTracker, TrainingMetrics
 from nbtm.training.trainer import Trainer, train_model
 
 __all__ = [
@@ -20,8 +19,6 @@ __all__ = [
     "ModelCheckpoint",
     "ProgressLogger",
     "WandbLogger",
-    "MetricsTracker",
-    "TrainingMetrics",
     "Trainer",
     "train_model",
 ]
