@@ -1,0 +1,13 @@
+# Variational Inference LDA Configuration
+
+model:
+  name: lda_vi
+  num_topics: 10
+  alpha: 0.1
+  beta: 0.01
+
+training:
+  num_iterations: 100   # VI typically converges faster
+  convergence_threshold: 0.001
+  check_convergence_every: 10
+  log_every: 10

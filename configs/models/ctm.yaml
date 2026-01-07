@@ -1,0 +1,14 @@
+# Correlated Topic Model Configuration
+
+model:
+  name: ctm
+  num_topics: 10
+  alpha: 0.1
+  beta: 0.01
+  # mean and covariance are learned from data
+
+training:
+  num_iterations: 200
+  convergence_threshold: 0.001
+  check_convergence_every: 20
+  log_every: 20

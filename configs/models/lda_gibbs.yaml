@@ -1,0 +1,13 @@
+# Gibbs Sampling LDA Configuration
+
+model:
+  name: lda_gibbs
+  num_topics: 10
+  alpha: 0.1          # Symmetric Dirichlet prior for document-topic
+  beta: 0.01          # Symmetric Dirichlet prior for topic-word
+
+training:
+  num_iterations: 1000
+  burn_in: 200
+  thinning: 10
+  log_every: 100

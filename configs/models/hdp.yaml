@@ -1,0 +1,15 @@
+# Hierarchical Dirichlet Process Configuration
+
+model:
+  name: hdp
+  num_topics: 50        # Maximum/initial topics (HDP learns actual count)
+  alpha: 0.1
+  beta: 0.01
+  gamma: 1.0            # Top-level DP concentration
+  alpha0: 1.0           # Document-level DP concentration
+
+training:
+  num_iterations: 500
+  burn_in: 100
+  thinning: 5
+  log_every: 50

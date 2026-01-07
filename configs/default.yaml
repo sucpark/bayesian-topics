@@ -1,0 +1,46 @@
+# Default configuration for NBTM
+# See docs/configuration.md for detailed documentation
+
+model:
+  name: lda_gibbs
+  num_topics: 10
+  alpha: 0.1          # Document-topic prior
+  beta: 0.01          # Topic-word prior
+
+training:
+  num_iterations: 1000
+  burn_in: 200        # Discard first N iterations
+  thinning: 10        # Keep every N-th sample
+  convergence_threshold: 0.0001
+  check_convergence_every: 100
+  save_every: 100
+  log_every: 50
+  early_stopping: false
+  patience: 5
+
+data:
+  data_dir: data
+  corpus_file: null
+  min_word_count: 5
+  max_vocab_size: null
+  stopwords: true
+  lowercase: true
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  random_state: 42
+
+evaluation:
+  compute_coherence: true
+  coherence_measure: c_v   # Options: u_mass, c_v, c_uci, c_npmi
+  top_n_words: 10
+  compute_perplexity: true
+  held_out_ratio: 0.1
+  compute_diversity: true
+
+seed: 42
+output_dir: outputs
+experiment_name: topic_model_experiment
+use_wandb: false
+wandb_project: null
+verbose: true
