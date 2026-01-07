@@ -1,4 +1,6 @@
-# NBTM: Nonparametric Bayesian Topic Modeling
+# Nonparametric Bayesian Topic Modeling
+
+> This project restructures the learning content from University of Chicago STAT 37400 (Nonparametric Inference) into a modern architecture.
 
 A research framework for comparing topic modeling algorithms, including LDA variants and nonparametric Bayesian models.
 
@@ -14,14 +16,15 @@ A research framework for comparing topic modeling algorithms, including LDA vari
 ## Installation
 
 ```bash
-# Basic installation
-pip install -e .
+# Create virtual environment with uv
+uv venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-# With development dependencies
-pip install -e ".[dev]"
+# Install with development dependencies
+uv pip install -e ".[dev]"
 
-# With all optional dependencies
-pip install -e ".[all]"
+# Or with all optional dependencies
+uv pip install -e ".[all]"
 ```
 
 ## Quick Start
@@ -111,7 +114,7 @@ evaluation:
 
 ```bash
 # Install dev dependencies
-pip install -e ".[dev]"
+uv pip install -e ".[dev]"
 
 # Run tests
 pytest
