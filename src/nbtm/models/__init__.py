@@ -5,6 +5,9 @@ from nbtm.models.registry import create_model, get_available_models, register_mo
 
 # Import models to register them
 from nbtm.models.lda_gibbs import GibbsLDA
+from nbtm.models.lda_vi import VariationalLDA
+from nbtm.models.hdp import HierarchicalDP
+from nbtm.models.ctm import CorrelatedTM
 
 __all__ = [
     "BaseTopicModel",
@@ -13,4 +16,7 @@ __all__ = [
     "get_available_models",
     "register_model",
     "GibbsLDA",
+    "VariationalLDA",
+    "HierarchicalDP",
+    "CorrelatedTM",
 ]
